@@ -9,7 +9,7 @@ To add a new semester's worth of classes, add the new units to the 'class_grades
 
 For example, you can start with this
 
-```
+```py
 class_grades = {
     # Y1S1 example
     'UNIT1001': {'mark': 95, 'credit points': 6},
@@ -22,7 +22,7 @@ class_grades = {
 
 Which, after the next semester, can then be updated to:
 
-```
+```py
 class_grades = {
     # Y1S1 example
     'UNIT1001': {'mark': 95, 'credit points': 6},
@@ -46,7 +46,7 @@ And so on.
 
 Execute the script in a Python environment. The script will prompt you to choose whether to calculate the WAM or the EIHWAM.
 
-```
+```py
 python grade_calculator.py
 ```
 
@@ -54,13 +54,13 @@ python grade_calculator.py
 
 When prompted, type either WAM or EIHWAM to perform the respective calculation.
 
-```
+```py
 Would you like to calculate WAM or EIHWAM?: WAM
 ```
 
 The script will then calculate and print the result:
 
-```
+```py
 WAM: 85.00
 ```
 
