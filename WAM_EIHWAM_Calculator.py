@@ -1,5 +1,5 @@
 # This stores units and their associated grade and credit point value
-# To add a new semester worth of classes, add a comma to the end of the last unit and repeat the same format. Leave a comma off the end of the last unit 
+# To add a new semester's worth of classes, add a comma to the end of the last unit and repeat the same format. Leave a comma off the end of the last unit 
 class_grades = {
     # Y1S1 example
     'UNIT1001': {'mark': 95, 'credit points': 6},
