@@ -38,8 +38,17 @@ def calculate_eihwam(grades):
     # Loops through the data of each unit whilst applying the EIHWAM formula
     for unit_code, info in grades.items():
         if int(unit_code[4]) > 1:
-            total += (info['mark'] * info['credit points'] * int(unit_code[4]))
-            credit_point_total += (info['credit points'] * int(unit_code[4]))
+            # Applies double weighting for thesis units
+            if unit_code in ["AMME4111", "AMME4112", "BMET4111", "BMET4112", "CHNG4811", "CHNG4812", "CIVL4022", "CIVL4023", "ELEC4712", "ELEC4713"]:
+                total += (info['mark'] * info['credit points'] * (int(unit_code[4]) * 2))
+                credit_point_total += (info['credit points'] * (int(unit_code[4]) * 2))
+            # Applies ceiling to level unit multiplier
+            elif int(unit_code[4]) > 4:
+                total += (info['mark'] * info['credit points'] * 4)
+                credit_point_total += (info['credit points'] * 4)
+            else:
+                total += (info['mark'] * info['credit points'] * int(unit_code[4]))
+                credit_point_total += (info['credit points'] * int(unit_code[4]))
     
     result = (total / credit_point_total)
 
