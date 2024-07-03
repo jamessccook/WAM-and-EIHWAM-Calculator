@@ -54,14 +54,20 @@ python grade_calculator.py
 
 When prompted, type either WAM or EIHWAM to perform the respective calculation.
 
-```py
+```
 Would you like to calculate WAM or EIHWAM?: WAM
 ```
 
 The script will then calculate and print the result:
 
-```py
+```
 WAM: 85.00
+```
+
+or
+
+```
+EIHWAM: 80.00
 ```
 
 ## Functions
